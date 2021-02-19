@@ -37,26 +37,12 @@ namespace calculator
 
                     string k = Console.ReadLine();
                     oper = k[0];
-                    switch (oper)
+                    if ((oper == '+') || (oper == '-') || (oper == '*') || (oper == '/') || (oper == '^'))
                     {
-                        case '+':
-                            f = true;
-                            break;
-                        case '-':
-                            f = true;
-                            break;
-                        case '*':
-                            f = true;
-                            break;
-                        case '/':
-                            f = true;
-                            break;
-                        case '^':
-                            f = true;
-                            break;
-                        default: Console.WriteLine("попробуйте заново");
-                            break;
+                        f = true;
                     }
+                    else
+                        Console.WriteLine("попробуйте заново");
 
                 }
                 if (oper != '^')
@@ -106,14 +92,6 @@ namespace calculator
                         Console.WriteLine(num3);
                         break;
                    
-
-                    default: 
-                        Console.WriteLine("Ну там же всего 4 операции, выберите заново");
-                        break;
-
-                      
-
-
                     }
                 
 
