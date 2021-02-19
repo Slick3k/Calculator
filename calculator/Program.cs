@@ -22,31 +22,59 @@ namespace calculator
                     p = Double.TryParse(i, out num1);
 
                 }
-                Console.WriteLine("Выберите операцию");
-                Console.WriteLine("1. Сложение");
-                Console.WriteLine("2. Вычитание");
-                Console.WriteLine("3. Умножение");
-                Console.WriteLine("4. Деление");
-                Console.ReadLine();
-                string k = Console.ReadLine();
-                char oper = k[0];
-
-                Console.WriteLine("Введите второе число");
-                string z = Console.ReadLine();
-                bool b = Double.TryParse(z, out double num2);
-                while (b == false)
-                {
-                    Console.WriteLine("Попробуйте ещё раз");
-                    Console.WriteLine("Введите второе число");
-                    z = Console.ReadLine();
-                    b = Double.TryParse(z, out num2);
-                }
+                bool f = false;
                 double num3 = 0;
-                
+                double num2 = 0;
+                char oper = default;
+                while (f == false)
+                {
+                    Console.WriteLine("Выберите операцию");
+                    Console.WriteLine("+ Сложение");
+                    Console.WriteLine("- Вычитание");
+                    Console.WriteLine("* Умножение");
+                    Console.WriteLine("/ Деление");
+                    Console.WriteLine("^ Возведение в степень");
 
+                    string k = Console.ReadLine();
+                    oper = k[0];
+                    switch (oper)
+                    {
+                        case '+':
+                            f = true;
+                            break;
+                        case '-':
+                            f = true;
+                            break;
+                        case '*':
+                            f = true;
+                            break;
+                        case '/':
+                            f = true;
+                            break;
+                        case '^':
+                            f = true;
+                            break;
+                        default: Console.WriteLine("попробуйте заново");
+                            break;
+                    }
+
+                }
+                if (oper != '^')
+                {
+                    Console.WriteLine("Введите второе число");
+                    string z = Console.ReadLine();
+                    bool b = Double.TryParse(z, out num2);
+                    while (b == false)
+                    {
+                        Console.WriteLine("Попробуйте ещё раз");
+                        Console.WriteLine("Введите второе число");
+                        z = Console.ReadLine();
+                        b = Double.TryParse(z, out num2);
+                    }
+                }
                 switch (oper)
                     {
-                    case '1':
+                    case '+':
                         
                         
                             num3 = num1 + num2;
@@ -54,15 +82,15 @@ namespace calculator
 
                         break;
 
-                    case '2':
+                    case '-':
                         num3 = num1 - num2;
                         Console.WriteLine(num3);
                         break;
-                    case '3':
+                    case '*':
                         num3 = num1 * num2;
                         Console.WriteLine(num3);
                         break;
-                    case '4': 
+                    case '/': 
                         if (num2 == 0)
                         {
                             Console.WriteLine("На ноль делить нельзя");
@@ -72,6 +100,10 @@ namespace calculator
                             num3 = num1 / num2;
                             Console.WriteLine(num3);
                         }
+                        break;
+                    case '^':
+                        num3 = num1 * num1;
+                        Console.WriteLine(num3);
                         break;
                    
 
