@@ -10,3 +10,4 @@ C:\repos\calculator\calculator\bin\Release\netcoreapp3.1\calculator.pdb
 C:\repos\calculator\calculator\obj\Release\netcoreapp3.1\calculator.dll
 C:\repos\calculator\calculator\obj\Release\netcoreapp3.1\calculator.pdb
 C:\repos\calculator\calculator\obj\Release\netcoreapp3.1\calculator.genruntimeconfig.cache
+C:\repos\calculator\calculator\obj\Release\netcoreapp3.1\calculator.csprojAssemblyReference.cache
